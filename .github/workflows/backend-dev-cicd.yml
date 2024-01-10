@@ -7,6 +7,7 @@ on:
       - 'backend/**'
       - '.github/**'
 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
