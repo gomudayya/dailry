@@ -8,8 +8,9 @@ on:
       
 jobs:
   create-branch:
-    if: contains(github.event.issue.labels.*.name, '🌱 신규 기능')
-     # contains(github.event.issue.labels.*.name, '✨ 리팩터링')
+    if: |
+      contains(github.event.issue.labels.*.name, '🌱 신규 기능') ||
+      contains(github.event.issue.labels.*.name, '✨ 리팩터링')
     runs-on: ubuntu-latest
     env:
       ISSUE_NUMBER: ${{ github.event.issue.number }}
