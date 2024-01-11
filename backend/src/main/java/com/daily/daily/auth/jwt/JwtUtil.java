@@ -120,7 +120,7 @@ public class JwtUtil {
                 .secure(true)
                 .httpOnly(true)
                 .sameSite("None")
-                .domain("https://localhost:3000")
+                .domain("localhost")
                 .build();
     }
 }
